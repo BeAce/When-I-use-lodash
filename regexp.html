@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RegExp匹配字符串</title>
+</head>
+<body>
+	<input id="input" type="text" placeholder="input a string">
+	<button id=btn>点我啊！</button>
+	<script>
+		var input = document.getElementById('input').value;
+		btn.onclick = function() {
+			var regexp = new RegExp("^.*" + input + ".*$");
+			if(regexp.test('张')) {
+				alert('ok');
+			}
+			
+		}
+	</script>
+</body>
+</html>

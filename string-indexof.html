@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>indexOf实现类模糊查询，同./regexp.html</title>
+</head>
+<body>
+	<input type="text" id="input" placeholder="input a string" />
+	<button id="btn">点我啊！</button>
+	<script>
+		document.getElementById('btn').onclick = function() {
+			var input = document.getElementById('input').value;
+			console.log(input);
+			if(input.indexOf('a') != -1) {
+				alert('ok the string contain a word "a"');
+			}
+		}
+	</script>
+</body>
+</html>
