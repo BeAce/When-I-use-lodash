@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>filter</title>
+</head>
+
+<body>
+    <script src="../../lib/lodash.js"></script>
+    <script>
+        var users = [
+            { 'user': 'barney', 'age': 36, 'active': true },
+            { 'user': 'fred',   'age': 40, 'active': false }
+        ];
+        var filterUsers = _.filter(users, function(o) {
+            return o.active;
+        })
+        console.log(filterUsers);
+    </script>
+</body>
+
+</html>

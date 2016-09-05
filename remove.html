@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script src="lib/lodash.js"></script>
+	<script>
+		window.onload = function() {
+			var data = [
+				{
+					"id": 6,
+					"vendorName": "51book",
+					"category": 2,
+					"categoryName": "7天快捷",
+					"additionPercent": 33
+				},
+				{
+					"id": 8,
+					"vendorName": "51book",
+					"category": 2,
+					"categoryName": "百时快捷",
+					"additionPercent": 33
+				},
+				{
+					"id": 8,
+					"vendorName": "51book",
+					"category": 1,
+					"ategoryName": "成都",
+					"additionPercent": 33
+				},
+				{
+					"id": 9,
+					"vendorName": "51book",
+					"category": 1,
+					"categoryName": "南京",
+					"additionPercent": 22
+				}
+			];
+			console.log("-----------data-----------");
+			console.log(data);
+
+			var removeData = _.remove(data, function(item) {
+				return item.category == 1 && item.id == 8;
+			})
+
+			console.log("-----------removeData-----------");
+			console.log(removeData);
+			console.log("-----------removedData-----------");
+			console.log(data);
+		}
+		
+	</script>
+</body>
+</html>
