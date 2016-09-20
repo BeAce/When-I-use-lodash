@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script src="lib/lodash.js"></script>
+	<script>
+			var arr = [
+				{company: {company: "分贝通",id:1}},{company:{company: "分贝通", id:1}},{company:{company: "wer",id:2}}];
+		// arr = _.filter(arr, function(item) {
+		// 	return item.company.indexOf("分贝通") > -1;
+		// });
+		//console.log(arr);
+		arr = _.uniqBy(arr, 'company.id');
+		console.log(arr);
+	</script>
+</body>
+</html>
